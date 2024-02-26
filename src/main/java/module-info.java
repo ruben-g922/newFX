@@ -5,4 +5,6 @@ module com.example.newfx {
 
     opens com.example.newfx to javafx.fxml;
     exports com.example.newfx;
+    exports com.example.newfx.controllers;
+    opens com.example.newfx.controllers to javafx.fxml;
 }

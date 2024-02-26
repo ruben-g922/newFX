@@ -11,9 +11,11 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane fx:id="window" minHeight="600.0" minWidth="400.0" prefHeight="426.0" prefWidth="534.0" styleClass="windows" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.newfx.MenuPageController">
+<AnchorPane fx:id="window" minHeight="600.0" minWidth="400.0" prefHeight="426.0" prefWidth="534.0"
+            styleClass="windows" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.newfx.controllers.MenuPageController">
    <children>
-      <MenuBar maxWidth="1.7976931348623157E308" prefHeight="32.0" prefWidth="534.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <MenuBar prefHeight="32.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
@@ -32,12 +34,15 @@
           </Menu>
         </menus>
       </MenuBar>
-      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0"
+            AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+
          <children>
             <HBox alignment="TOP_CENTER" prefHeight="46.0" prefWidth="301.0">
                <children>
                   <Button mnemonicParsing="false" onAction="#addItemToList" text="Add" />
                   <TextField fx:id="fieldForList" onAction="#onEnter" promptText="New Item" />
+
                </children>
                <opaqueInsets>
                   <Insets />
@@ -46,7 +51,8 @@
                   <Insets bottom="10.0" />
                </VBox.margin>
             </HBox>
-            <ListView fx:id="listView" fixedCellSize="50.0" maxHeight="300.0" maxWidth="500.0" minHeight="200.0" minWidth="100.0" prefHeight="200.0" prefWidth="443.0" visible="false" VBox.vgrow="ALWAYS" />
+            <ListView fx:id="listView" fixedCellSize="50.0" maxHeight="300.0" maxWidth="500.0"
+                      minHeight="200.0" minWidth="100.0" prefHeight="200.0" prefWidth="443.0" VBox.vgrow="ALWAYS" />
             <Button mnemonicParsing="false" onAction="#clearList" text="Clear All">
                <VBox.margin>
                   <Insets top="25.0" />

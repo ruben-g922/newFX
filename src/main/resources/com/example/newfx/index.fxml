@@ -4,12 +4,18 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox fx:id="window" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="300.0" minWidth="300.0" prefHeight="500.0" prefWidth="600.0" styleClass="windows" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.newfx.IndexController">
+<VBox fx:id="window" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity"
+      minHeight="300.0" minWidth="300.0" prefHeight="500.0" prefWidth="600.0" styleClass="windows"
+      stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.newfx.controllers.IndexController">
+
     <padding>
         <Insets bottom="10.0" left="0.0" right="0.0" top="80.0" />
     </padding>
 
     <children>
-      <Button mnemonicParsing="false" onAction="#startButton" scaleX="1.5" scaleY="1.5" styleClass="buttons" text="To the next window!" textAlignment="CENTER" />
+      <Button mnemonicParsing="false" onAction="#startButton" scaleX="1.5" scaleY="1.5" styleClass="buttons"
+              text="To the next window!" textAlignment="CENTER" />
+
    </children>
 </VBox>

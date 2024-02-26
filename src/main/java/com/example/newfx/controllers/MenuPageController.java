@@ -1,5 +1,6 @@
-package com.example.newfx;
+package com.example.newfx.controllers;
 
+import com.example.newfx.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -52,6 +53,9 @@ public class MenuPageController implements Initializable {
         addToList(fieldForList.getText());
     }
 
+    /**
+     * Clears the items from the listview
+     */
     @FXML
     protected void clearList() {
         listView.getItems().clear();
@@ -64,7 +68,7 @@ public class MenuPageController implements Initializable {
     @FXML
     protected void menuButtonBack() throws IOException {
         Stage stage = (Stage) window.getScene().getWindow();
-        Parent loader = FXMLLoader.load(getClass().getResource("index.fxml"));
+        Parent loader = FXMLLoader.load(Application.class.getResource("index.fxml"));
         stage.setTitle("Home");
         stage.setScene(new Scene(loader, window.getWidth(), window.getHeight()));
     }
