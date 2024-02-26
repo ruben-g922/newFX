@@ -18,4 +18,9 @@ public class IndexController {
         Application.getStage().setTitle("JavaFX");
         Application.getStage().setScene(new Scene(loader, window.getWidth(), window.getHeight()));
     }
+
+    @FXML
+    protected void quit() {
+        Application.getStage().close();
+    }
 }
