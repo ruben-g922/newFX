@@ -11,6 +11,9 @@ public class Application extends javafx.application.Application {
 
     private static Stage window;
 
+    /**
+     * Starts the application
+     */
     @Override
     public void start(Stage stage) throws IOException {
         window = stage;
@@ -23,6 +26,10 @@ public class Application extends javafx.application.Application {
         window.show();
     }
 
+    /**
+     * Reduces hassle of finding where the current stage is
+     * @return Stage created at app startup
+     */
     public static Stage getStage() {
         return window;
     }

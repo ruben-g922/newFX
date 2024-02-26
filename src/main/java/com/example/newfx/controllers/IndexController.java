@@ -12,6 +12,10 @@ public class IndexController {
     @FXML
     private VBox window;
 
+    /**
+     * Changes the scene to the main one
+     * Showcases one way of changing the scene
+     */
     @FXML
     protected void startButton() throws IOException {
         Parent loader = FXMLLoader.load(Application.class.getResource("MenuPage.fxml"));
