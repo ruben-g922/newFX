@@ -20,15 +20,13 @@ import java.util.ResourceBundle;
  * Controller for the MenuPage view
  * Note that this controller implements Initializable
  * This allows us to override the initialize method and run setup code, like populate the listview
- * A similar method is constructor. constructor runs before any @FXML, initialize runs after
+ * A similar method is constructor. difference is constructor runs before any @FXML are initialized
  */
 public class MenuPageController implements Initializable {
 
 
     /**
      * Initialization work
-     * @param url
-     * @param resourceBundle
      */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -61,16 +59,26 @@ public class MenuPageController implements Initializable {
         listView.getItems().clear();
     }
 
+    /**
+     * Allows hitting enter key to enter
+     */
     @FXML
     protected void onEnter(ActionEvent enter) {
         addToList(fieldForList.getText());
     }
+
+    /**
+     * Returns to the index page
+     * Showcases another way to change the scene
+     * Personally prefer the other way, fewer lines and cleaner, but just to show it
+     */
     @FXML
     protected void menuButtonBack() throws IOException {
         Stage stage = (Stage) window.getScene().getWindow();
-        Parent loader = FXMLLoader.load(Application.class.getResource("index.fxml"));
+        FXMLLoader loader = new FXMLLoader(Application.class.getResource("index.fxml"));
+        Scene scene = new Scene(loader.load(), window.getWidth(), window.getHeight());
         stage.setTitle("Home");
-        stage.setScene(new Scene(loader, window.getWidth(), window.getHeight()));
+        stage.setScene(scene);
     }
 
     /**
