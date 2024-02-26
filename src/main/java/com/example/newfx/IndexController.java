@@ -14,7 +14,7 @@ public class IndexController {
     @FXML
     protected void startButton() throws IOException {
         Parent loader = FXMLLoader.load(getClass().getResource("MenuPage.fxml"));
-        HelloApplication.getStage().setTitle("JavaFX");
-        HelloApplication.getStage().setScene(new Scene(loader, window.getWidth(), window.getHeight()));
+        Application.getStage().setTitle("JavaFX");
+        Application.getStage().setScene(new Scene(loader, window.getWidth(), window.getHeight()));
     }
 }

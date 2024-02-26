@@ -1,13 +1,12 @@
 package com.example.newfx;
 
-import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HelloApplication extends Application {
+public class Application extends javafx.application.Application {
     private final String starter = "index.fxml";
 
     private static Stage window;
@@ -15,7 +14,7 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         window = stage;
-        FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource(starter));
+        FXMLLoader loader = new FXMLLoader(Application.class.getResource(starter));
         Scene scene = new Scene(loader.load(), 320, 500);
         window.setTitle("Home");
         window.setMinHeight(500);
