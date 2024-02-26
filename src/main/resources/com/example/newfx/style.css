@@ -1,0 +1,10 @@
+.windows {
+-fx-background-color: #546175;
+}
+
+.buttons {
+-fx-background-color: #8be0cc;
+}
+.buttons:hover {
+-fx-background-color: #c3e8df;
+}
